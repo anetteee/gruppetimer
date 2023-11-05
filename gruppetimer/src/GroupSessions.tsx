@@ -18,7 +18,7 @@ function GroupSessions() {
 
   return (
     <Container maxW="container.lg">
-      <SimpleGrid columns={1} spacing={4}>
+      <SimpleGrid columns={1} spacing={2}>
         {sessions.map((sessionInfo) => (
           <GroupSession key={sessionInfo.id} sessionInfo={sessionInfo} />
         ))}

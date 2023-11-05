@@ -61,15 +61,17 @@ const GroupSession: React.FC<GroupSessionProps> = ({ sessionInfo }) => {
         </Box>
         <Box flexBasis="50%">
           {" "}
-          <Text fontSize="2xl">{sessionInfo.name}</Text>
-          <Text>{sessionInfo.instructor}</Text>
+          <Text fontSize="2xl" mb={3}>
+            {sessionInfo.name}
+          </Text>
+          <Text>w/ {sessionInfo.instructor}</Text>
           <Text>{sessionInfo.clubName}</Text>
         </Box>
         <Box>
           <Button
+            mb={3}
             flex={1}
             fontSize={"sm"}
-            rounded={"full"}
             onClick={handleClick}
             disabled={
               updatedSessionInfo.bookingInfo.memberBookingInfo.bookingState ===

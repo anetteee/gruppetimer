@@ -1,13 +1,16 @@
 import React from "react";
-import "./App.css";
 import GroupSessions from "./GroupSessions";
 import Navbar from "./Navbar";
+import { Heading } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      <header> GRUPPETIMER</header>
+      <Heading marginLeft={13} p={4}>
+        {" "}
+        BOOK GRUPPETIME
+      </Heading>{" "}
       <GroupSessions />
     </div>
   );
