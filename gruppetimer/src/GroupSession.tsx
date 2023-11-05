@@ -79,6 +79,12 @@ const GroupSession: React.FC<GroupSessionProps> = ({ sessionInfo }) => {
               updatedSessionInfo.bookingInfo.bookedCount ===
                 updatedSessionInfo.bookingInfo.capacity
             }
+            colorScheme={
+              updatedSessionInfo.bookingInfo.memberBookingInfo.bookingState ===
+              "NotBooked"
+                ? "green"
+                : "red"
+            }
           >
             {updatedSessionInfo.bookingInfo.memberBookingInfo.bookingState ===
             "NotBooked"
