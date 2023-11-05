@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { SessionInfo } from "./types";
+import GroupSession from "./GroupSession";
+import { Container, SimpleGrid } from "@chakra-ui/react";
 
 function GroupSessions() {
   const [sessions, setSessions] = useState<SessionInfo[]>([]);
@@ -15,11 +17,13 @@ function GroupSessions() {
   }, []);
 
   return (
-    <div>
-      {sessions.map((session, index) => (
-        <li key={index}>{session.name}</li>
-      ))}
-    </div>
+    <Container maxW="container.lg">
+      <SimpleGrid columns={1} spacing={4}>
+        {sessions.map((sessionInfo) => (
+          <GroupSession key={sessionInfo.id} sessionInfo={sessionInfo} />
+        ))}
+      </SimpleGrid>
+    </Container>
   );
 }
 
